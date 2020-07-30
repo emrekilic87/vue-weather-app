@@ -12,7 +12,7 @@ var vm = new Vue({
     },
     methods: {
         getWeather: function () {
-            var request = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + 'Istanbul,tr' + '&appid=75e134306d5dc062ce7553905b8032aa';
+            var request = 'https://api.openweathermap.org/data/2.5/forecast/daily?q=' + 'Istanbul,tr' + '&appid=75e134306d5dc062ce7553905b8032aa';
 
             this.$http.get(request).then(function (response) {
                 console.log(response)
