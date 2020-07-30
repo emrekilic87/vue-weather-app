@@ -1,0 +1,17 @@
+﻿@media only screen and (max-width:992px) {
+    #app {
+        .descArea {
+            width: (100% / 4);
+        }
+    }
+}
+
+
+@media only screen and (max-width:550px) {
+    #app {
+        .descArea {
+            display:block;
+            width: 100%;
+        }
+    }
+}

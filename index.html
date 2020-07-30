@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/main.min.css" rel="stylesheet" />
+    <link href="css/responsive.min.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div id="app">
+        <h1 class="mainTitle title">WEATHER APP</h1>
+        <h2 class="city">
+            <span class="name">{{city}}</span></h2>
+        <div class="descArea" v-for="(item, index) in weatherList">
+            <h1 class="dayNumber title">{{index + 1}}. Day</h1>
+                <p class="tempArea">
+                    <span class="subTitle">Temp:</span> 
+                    <span class="deg">{{ (item.temp.day - 273.15).toFixed(1)}} °C </span>
+                </p>
+                <p>
+                    <span class="weatherMain subTitle">Condition:</span>
+                    <span class="weatherDesc">{{ item.weather[0].main }}</span>
+                </p>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+   
+    <!--<script src="js/vue.js"></script>-->
+    <script src="js/vue_2_5_16.min.js"></script>
+    <script src="js/vue-resource-1_5_1.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>
